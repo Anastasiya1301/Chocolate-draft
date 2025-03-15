@@ -7,9 +7,9 @@ body {
 .container {
   width: 375px;
   padding: 0 20px;
+  margin: 0 auto;
 }
 .components {
-  width: 375px;
   padding-top: 128px;
   padding-bottom: 128px;
 }
@@ -40,6 +40,7 @@ body {
   flex-direction: column;
   display: flex;
   row-gap: 20px;
+  align-items: center;
 }
 .ingredients__item {
   position: relative;
@@ -85,13 +86,11 @@ body {
 }
 
 .footer {
-  width: 375px;
   background-color: #1e1823;
   padding-top: 50px;
   padding-bottom: 50px;
 }
 .wrapper {
-  /* width: 335px; */
   display: flex;
   flex-direction: column;
   row-gap: 32px;
@@ -128,16 +127,13 @@ body {
   width: 335px;
   color: #ffffff19;
   margin-top: 32px;
-  /* margin-bottom: 32px; */
 }
 .contacts__link {
   display: block;
   margin-bottom: 4px;
   font-family: Montserrat, sans-serif;
-  font-weight: 400;
   font-size: 14px;
   line-height: 1.29;
-  letter-spacing: -0.02em;
   color: #fff;
 }
 .socials {
@@ -159,6 +155,5 @@ body {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
-  letter-spacing: -0.02em;
   color: #fff;
 }
