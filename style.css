@@ -62,7 +62,7 @@ body {
 }
 .ingredients__item {
   position: relative;
-  width: 335px;
+  width: 100%;
   height: 270px;
   background-repeat: no-repeat;
   background-position: center;
