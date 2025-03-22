@@ -141,14 +141,15 @@ body {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   @media screen and (min-width: 768px) {
     flex-direction: row;
-    column-gap: 124px;
+    justify-content: space-between;
+    /* column-gap: 124px; */
   }
   @media screen and (min-width: 1200px) {
     column-gap: 543px;
   }
 }
 .footer__title {
-  width: 300px;
+  width: 256px;
   font-family: Montserrat, sans-serif;
   color: #fff;
   font-weight: 500;
@@ -168,8 +169,8 @@ body {
   /* justify-content: space-between; */
   column-gap: 113px;
   align-items: center;
+  align-items: start;
   @media screen and (min-width: 768px) {
-    align-items: start;
     column-gap: 50px;
   }
   @media screen and (min-width: 1200px) {
@@ -195,6 +196,7 @@ body {
   display: block;
   margin-bottom: 4px;
   font-family: Montserrat, sans-serif;
+  font-style: normal;
   font-size: 14px;
   line-height: 1.29;
   color: #fff;
