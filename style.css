@@ -4,11 +4,11 @@ body {
   font-weight: 400;
   letter-spacing: -0.02em;
   line-height: 1.2;
-  @media screen  and (min-width:768px){
+  @media screen and (min-width: 768px) {
     font-weight: 600;
     line-height: 1.29;
   }
-  @media screen and (min-width:1200px) {
+  @media screen and (min-width: 1200px) {
     line-height: 1.17;
   }
 }
@@ -104,20 +104,32 @@ body {
 .ingredients__item:nth-child(1) {
   background-color: #fd9222;
   background-image: url(./image/choco-milk-sec2-1x-desktop.png);
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    order: 1;
+  }
 }
 .ingredients__item:nth-child(2) {
   background-color: #fff;
   border: 1px solid #fd9222;
   background-image: url(./image/milk-sec3-1x-desktop.png);
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    order: 3;
+  }
 }
 .ingredients__item:nth-child(3) {
   background-color: #1e1823;
   background-image: url(./image/nuts-sec3-1x-desktop.png);
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    order: 4;
+  }
 }
 .ingredients__item:nth-child(4) {
   background-color: #fff;
   background-image: url(./image/semi-sw-choco-sec3-1x-desktop.png);
   border: 1px solid #fd9222;
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    order: 2;
+  }
 }
 .ingredients__name {
   position: absolute;
@@ -162,6 +174,7 @@ body {
   font-size: 24px;
   line-height: 1.17;
   @media screen and (min-width: 768px) {
+    width: 300px;
     font-size: 28px;
     line-height: 1.21;
   }
@@ -209,7 +222,7 @@ body {
 .socials {
   display: flex;
   column-gap: 14px;
-  @media screen and (min-width:768px) {
+  @media screen and (min-width: 768px) {
     column-gap: 18px;
   }
 }
