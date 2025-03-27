@@ -65,8 +65,10 @@ body {
   line-height: 1.29;
   text-align: center;
   color: #111111;
+
   @media screen and (min-width: 768px) {
     width: 486px;
+    font-weight: 400;
   }
   @media screen and (min-width: 1200px) {
     font-size: 14px;
@@ -214,10 +216,12 @@ body {
   display: block;
   margin-bottom: 4px;
   font-family: Montserrat, sans-serif;
-  font-style: normal;
   font-size: 14px;
   line-height: 1.29;
   color: #fff;
+  @media screen and (min-width:768px) {
+    font-weight: 400;
+  }
 }
 .socials {
   display: flex;
