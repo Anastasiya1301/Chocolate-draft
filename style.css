@@ -94,7 +94,8 @@ body {
   width: 100%;
   height: 270px;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position-y: 28px;
+  background-position-x: center;
   border-radius: 15px;
   @media screen and (min-width: 768px) {
     flex-basis: calc((100% - 32px) / 2);
