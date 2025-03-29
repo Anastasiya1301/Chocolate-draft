@@ -1,3 +1,14 @@
+:root {
+  --font-family: "Montserrat", sans-serif;
+  --second-family: "Roboto", sans-serif;
+  --black-color: #111;
+  --darkblue-color: #1e1823;
+  --orange-color: #fd9222;
+  --white-color: #fafafa;
+  --grey-color: #ffffff19;
+  --sec-two-color-grey: rgba(255, 255, 255, 0.7);
+}
+
 body {
   font-family: Montserrat, sans-serif;
   font-size: 14px;
@@ -40,31 +51,22 @@ body {
   padding-bottom: 128px;
 }
 .components__title {
-  font-family: Montserrat, sans-serif;
-  font-weight: 600;
+  display: block;
   width: 283px;
-  font-size: 20px;
-  letter-spacing: -0.03em;
-  text-transform: uppercase;
-  text-align: center;
   margin: 0 auto;
-  color: #111111;
   @media screen and (min-width: 768px) {
     font-size: 24px;
     line-height: 1.17;
     width: 411px;
   }
 }
-.components__span {
-  color: #fd9222;
-}
 .components__text {
   width: 335px;
   margin: 24px auto 32px;
-  font-family: Montserrat, sans-serif;
+  font-family: $font-family;
   line-height: 1.29;
   text-align: center;
-  color: #111111;
+  color: $black-color;
 
   @media screen and (min-width: 768px) {
     width: 486px;
@@ -93,50 +95,89 @@ body {
   position: relative;
   width: 100%;
   height: 270px;
+  background-size: 224px 171px;
   background-repeat: no-repeat;
   background-position-y: 28px;
   background-position-x: center;
   border-radius: 15px;
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-size: 224px 171px;
+    background-position-y: 28px;
+    background-position-x: center;
+  }
   @media screen and (min-width: 768px) {
     flex-basis: calc((100% - 32px) / 2);
   }
   @media screen and (min-width: 1200px) {
+    background-size: 206px 160px;
     flex-basis: 270px;
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        background-size: 206px 160px;
+    }
   }
 }
 .ingredients__item:nth-child(1) {
-  background-color: #fd9222;
-  background-image: url(./image/choco-milk-sec2-1x-desktop.png);
+  background-color: $orange-color;
+  background-image: url(../images/choco-milk-sec2-1x-desktop-min.png);
   @media screen and (min-width: 768px) and (max-width: 1200px) {
     order: 1;
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/choco-milk-sec2-2x-desktop-min.png);
+      // background-size: 448px 342px;
+    }
   }
 }
 .ingredients__item:nth-child(2) {
   background-color: #fff;
-  border: 1px solid #fd9222;
-  background-image: url(./image/milk-sec3-1x-desktop.png);
+  border: 1px solid $orange-color;
+  background-image: url(../images/milk-sec3-1x-desktop-min.png);
   @media screen and (min-width: 768px) and (max-width: 1200px) {
     order: 3;
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/milk-sec3-2x-desktop-min.png);
+      // background-size: 448px 342px;
+    }
   }
 }
 .ingredients__item:nth-child(3) {
-  background-color: #1e1823;
-  background-image: url(./image/nuts-sec3-1x-desktop.png);
+  background-color: $darkblue-color;
+  background-image: url(../images/nuts-sec3-1x-desktop-min.png);
   @media screen and (min-width: 768px) and (max-width: 1200px) {
     order: 4;
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/nuts-sec3-2x-desktop-min.png);
+      // background-size: 448px 342px;
+    }
   }
 }
 .ingredients__item:nth-child(4) {
   background-color: #fff;
-  background-image: url(./image/semi-sw-choco-sec3-1x-desktop.png);
-  border: 1px solid #fd9222;
+  background-image: url(../images/semi-sw-choco-sec3-1x-desktop-min.png);
+  border: 1px solid $orange-color;
   @media screen and (min-width: 768px) and (max-width: 1200px) {
     order: 2;
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/semi-sw-choco-sec3-2x-desktop-min.png);
+      // background-size: 448px 342px;
+    }
   }
 }
 .ingredients__name {
+  font-size: 14px;
   position: absolute;
-  font-family: Montserrat, sans-serif;
+  font-family: $font-family;
   font-weight: 600;
   line-height: 1.29;
   text-transform: uppercase;
@@ -144,14 +185,14 @@ body {
   bottom: 28px;
 }
 .ingredients__name--black {
-  color: #111111;
+  color: $black-color;
 }
 .ingredients__name--white {
   color: #fff;
 }
 
 .footer {
-  background-color: #1e1823;
+  background-color: $darkblue-color;
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -163,7 +204,6 @@ body {
   @media screen and (min-width: 768px) {
     flex-direction: row;
     justify-content: space-between;
-    /* column-gap: 124px; */
   }
   @media screen and (min-width: 1200px) {
     column-gap: 543px;
@@ -171,7 +211,7 @@ body {
 }
 .footer__title {
   width: 256px;
-  font-family: Montserrat, sans-serif;
+  font-family: $font-family;
   color: #fff;
   font-weight: 500;
   font-size: 24px;
@@ -182,12 +222,8 @@ body {
     line-height: 1.21;
   }
 }
-.footer__span {
-  color: #fd9222;
-}
 .information {
   display: flex;
-  /* justify-content: space-between; */
   column-gap: 113px;
   align-items: center;
   align-items: start;
@@ -200,7 +236,7 @@ body {
 }
 .address__text {
   margin-bottom: 14px;
-  font-family: Montserrat, sans-serif;
+  font-family: $font-family;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.29;
@@ -210,13 +246,13 @@ body {
   content: "";
   display: block;
   width: 100%;
-  color: #ffffff19;
+  color: $grey-color;
   margin-top: 32px;
 }
 .contacts__link {
   display: block;
   margin-bottom: 4px;
-  font-family: Montserrat, sans-serif;
+  font-family: $font-family;
   font-size: 14px;
   line-height: 1.29;
   color: #fff;
@@ -252,7 +288,7 @@ body {
   }
 }
 .navigation__link {
-  font-family: Montserrat, sans-serif;
+  font-family: $font-family;
   font-weight: 500;
   line-height: 1.14;
   color: #fff;
