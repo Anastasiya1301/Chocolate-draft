@@ -51,6 +51,15 @@ body {
   padding-bottom: 128px;
 }
 .components__title {
+  justify-content: center;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--black-color);
   display: block;
   width: 283px;
   margin: 0 auto;
@@ -59,14 +68,17 @@ body {
     line-height: 1.17;
     width: 411px;
   }
+.title--orange{
+  color: var(--orange-color);
+}
 }
 .components__text {
   width: 335px;
   margin: 24px auto 32px;
-  font-family: $font-family;
+  font-family: var(--font-family);
   line-height: 1.29;
   text-align: center;
-  color: $black-color;
+  color: var(--black-color);
 
   @media screen and (min-width: 768px) {
     width: 486px;
@@ -121,63 +133,63 @@ body {
   }
 }
 .ingredients__item:nth-child(1) {
-  background-color: $orange-color;
-  background-image: url(../images/choco-milk-sec2-1x-desktop-min.png);
-  @media screen and (min-width: 768px) and (max-width: 1200px) {
+  background-color: var(--orange-color);
+  background-image: url(./image/choco-milk-sec2-1x-desktop.png);
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     order: 1;
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
       background-image: url(../images/choco-milk-sec2-2x-desktop-min.png);
-      // background-size: 448px 342px;
+      /* // background-size: 448px 342px; */
     }
   }
 }
 .ingredients__item:nth-child(2) {
   background-color: #fff;
-  border: 1px solid $orange-color;
-  background-image: url(../images/milk-sec3-1x-desktop-min.png);
-  @media screen and (min-width: 768px) and (max-width: 1200px) {
+  border: 1px solid var(--orange-color);
+  background-image: url(./image/milk-sec3-1x-desktop.png);
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     order: 3;
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
       background-image: url(../images/milk-sec3-2x-desktop-min.png);
-      // background-size: 448px 342px;
+      /* // background-size: 448px 342px; */
     }
   }
 }
 .ingredients__item:nth-child(3) {
-  background-color: $darkblue-color;
-  background-image: url(../images/nuts-sec3-1x-desktop-min.png);
-  @media screen and (min-width: 768px) and (max-width: 1200px) {
+  background-color: var(--darkblue-color);
+  background-image: url(./image/nuts-sec3-1x-desktop.png);
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     order: 4;
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
       background-image: url(../images/nuts-sec3-2x-desktop-min.png);
-      // background-size: 448px 342px;
+      /* // background-size: 448px 342px; */
     }
   }
 }
 .ingredients__item:nth-child(4) {
   background-color: #fff;
-  background-image: url(../images/semi-sw-choco-sec3-1x-desktop-min.png);
-  border: 1px solid $orange-color;
-  @media screen and (min-width: 768px) and (max-width: 1200px) {
+  background-image: url(./image/semi-sw-choco-sec3-1x-desktop.png);
+  border: 1px solid var(--orange-color);
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     order: 2;
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
       background-image: url(../images/semi-sw-choco-sec3-2x-desktop-min.png);
-      // background-size: 448px 342px;
+      /* // background-size: 448px 342px; */
     }
   }
 }
 .ingredients__name {
   font-size: 14px;
   position: absolute;
-  font-family: $font-family;
+  font-family: var(--font-family);
   font-weight: 600;
   line-height: 1.29;
   text-transform: uppercase;
@@ -185,14 +197,14 @@ body {
   bottom: 28px;
 }
 .ingredients__name--black {
-  color: $black-color;
+  color: var(--black-color);
 }
 .ingredients__name--white {
   color: #fff;
 }
 
 .footer {
-  background-color: $darkblue-color;
+  background-color: var(--darkblue-color);
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -211,7 +223,7 @@ body {
 }
 .footer__title {
   width: 256px;
-  font-family: $font-family;
+  font-family: var(--font-family);
   color: #fff;
   font-weight: 500;
   font-size: 24px;
@@ -221,6 +233,9 @@ body {
     font-size: 28px;
     line-height: 1.21;
   }
+.footer__span{
+  color: var(--orange-color);
+}
 }
 .information {
   display: flex;
@@ -236,7 +251,7 @@ body {
 }
 .address__text {
   margin-bottom: 14px;
-  font-family: $font-family;
+  font-family: var(--font-family);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.29;
@@ -246,13 +261,13 @@ body {
   content: "";
   display: block;
   width: 100%;
-  color: $grey-color;
+  color: var(--grey-color);
   margin-top: 32px;
 }
 .contacts__link {
   display: block;
   margin-bottom: 4px;
-  font-family: $font-family;
+  font-family: var(--font-family);
   font-size: 14px;
   line-height: 1.29;
   color: #fff;
@@ -288,7 +303,7 @@ body {
   }
 }
 .navigation__link {
-  font-family: $font-family;
+  font-family: var(--font-family);
   font-weight: 500;
   line-height: 1.14;
   color: #fff;
