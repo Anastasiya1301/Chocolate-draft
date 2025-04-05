@@ -10,7 +10,7 @@
 }
 
 body {
-  font-family: Montserrat, sans-serif;
+  font-family: var(--font-family);
   font-size: 14px;
   font-weight: 400;
   letter-spacing: -0.02em;
@@ -47,19 +47,11 @@ body {
   }
 }
 .components {
-  /* background-color: #E2E2E2; */
-  padding-top: 72px;
-  padding-bottom: 72px;
-  @media screen and (min-width: 768px) {
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
-  @media screen and (min-width: 1200px) {
-    padding-top: 128px;
-    padding-bottom: 128px;
-  }
+  padding-top: 128px;
+  padding-bottom: 128px;
 }
 .components__title {
+  justify-content: center;
   font-family: var(--font-family);
   font-weight: 600;
   font-size: 20px;
@@ -76,9 +68,9 @@ body {
     line-height: 1.17;
     width: 411px;
   }
-  .title--orange {
-    color: var(--orange-color);
-  }
+.title--orange{
+  color: var(--orange-color);
+}
 }
 .components__text {
   width: 335px;
@@ -87,8 +79,8 @@ body {
   line-height: 1.29;
   text-align: center;
   color: var(--black-color);
+
   @media screen and (min-width: 768px) {
-    margin: 28px auto 50px;
     width: 486px;
     font-weight: 400;
   }
@@ -109,6 +101,7 @@ body {
   }
   @media screen and (min-width: 1200px) {
     column-gap: 19px;
+    flex-wrap: nowrap;
   }
 }
 .ingredients__item {
@@ -133,65 +126,65 @@ body {
   }
   @media screen and (min-width: 1200px) {
     background-size: 206px 160px;
-    flex-basis: 270px;
+    flex-basis: calc((100% - 57px) / 3);
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background-size: 206px 160px;
+        background-size: 206px 160px;
     }
   }
+&:hover .overlay,
+&:focus .overlay {
+  transform: translate(0);
+}
 }
 .ingredients__item:nth-child(1) {
   background-color: var(--orange-color);
-  background-image: url(./image/choco-milk-sec2-1x-desktop.png);
+  background-image: url(../image/choco-milk-sec2-1x-desktop.png);
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     order: 1;
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background-image: url(../images/choco-milk-sec2-2x-desktop-min.png);
-      /* // background-size: 448px 342px; */
+      background-image: url(../image/choco-milk-sec3-2x-desktop-min.png);
     }
   }
 }
 .ingredients__item:nth-child(2) {
   background-color: #fff;
   border: 1px solid var(--orange-color);
-  background-image: url(./image/milk-sec3-1x-desktop.png);
+  background-image: url(../image/milk-sec3-1x-desktop.png);
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     order: 3;
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background-image: url(../images/milk-sec3-2x-desktop-min.png);
-      /* // background-size: 448px 342px; */
+      background-image: url(../image/milk-sec3-2x-desktop-min.png);
     }
   }
 }
 .ingredients__item:nth-child(3) {
   background-color: var(--darkblue-color);
-  background-image: url(./image/nuts-sec3-1x-desktop.png);
+  background-image: url(../image/nuts-sec3-1x-desktop.png);
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     order: 4;
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background-image: url(../images/nuts-sec3-2x-desktop-min.png);
-      /* // background-size: 448px 342px; */
+      background-image: url(../image/nuts-sec3-2x-desktop-min.png);
     }
   }
 }
 .ingredients__item:nth-child(4) {
   background-color: #fff;
-  background-image: url(./image/semi-sw-choco-sec3-1x-desktop.png);
+  background-image: url(../image/semi-sw-choco-sec3-1x-desktop.png);
   border: 1px solid var(--orange-color);
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     order: 2;
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background-image: url(../images/semi-sw-choco-sec3-2x-desktop-min.png);
-      /* // background-size: 448px 342px; */
+      background-image: url(../image/semi-sw-choco-sec3-2x-desktop-min.png);
     }
   }
 }
@@ -211,6 +204,7 @@ body {
 .ingredients__name--white {
   color: #fff;
 }
+
 .overlay {
   position: absolute;
   top: 0;
@@ -238,7 +232,10 @@ body {
   font-size: 18px;
   letter-spacing: -0.03em;
   text-transform: uppercase;
-  color: var(--chorniy);
+  color: var(--black-color);
+  @media screen and (min-width:1200px){
+    font-size: 16px;
+  }
 }
 .overlay__button {
   font-family: var(--font-family);
@@ -251,7 +248,7 @@ body {
   text-align: center;
 }
 .overlay__button--orange {
-  background-color: #fd9222;
+  background-color: var(--orange-color);
   color: #fff;
 }
 .overlay__button--white {
@@ -265,8 +262,10 @@ body {
   font-size: 13px;
   line-height: 1.29;
   letter-spacing: -0.02em;
-  color: var(--chorniy);
+  color: var(--black-color);
 }
+
+
 .footer {
   background-color: var(--darkblue-color);
   padding-top: 50px;
@@ -297,9 +296,9 @@ body {
     font-size: 28px;
     line-height: 1.21;
   }
-  .footer__span {
-    color: var(--orange-color);
-  }
+.footer__span{
+  color: var(--orange-color);
+}
 }
 .information {
   display: flex;
@@ -335,7 +334,7 @@ body {
   font-size: 14px;
   line-height: 1.29;
   color: #fff;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width:768px) {
     font-weight: 400;
   }
 }
