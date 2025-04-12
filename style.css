@@ -114,6 +114,7 @@ body {
   background-position-y: 28px;
   background-position-x: center;
   border-radius: 15px;
+  border: 1px solid var(--orange-color);
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
@@ -178,7 +179,7 @@ body {
 .ingredients__item:nth-child(4) {
   background-color: #fff;
   background-image: url(../image/semi-sw-choco-sec3-1x-desktop.png);
-  border: 1px solid var(--orange-color);
+  /* border: 1px solid var(--orange-color); */
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     order: 2;
     @media (min-device-pixel-ratio: 2),
@@ -226,9 +227,6 @@ body {
   column-gap: 6px;
   margin: 8px 0 14px;
 }
-.ingredients__item{
-  border: 1px solid var(--orange-color);
-}
 .overlay__title {
   font-family: var(--font-family);
   font-weight: 600;
@@ -273,13 +271,14 @@ body {
   background-color: var(--darkblue-color);
   padding-top: 50px;
   padding-bottom: 50px;
-  width: 375px;
+  min-width: 375px;
+  /* width: 375px; */
   margin: 0 auto;
   @media screen and (min-width:768px){
-    width: 768px;
+    min-width: 768px;
   }
   @media screen and (min-width:1200px){
-    width: 1200px;
+    min-width: 1200px;
   }
 }
 .wrapper {
@@ -346,6 +345,7 @@ body {
   font-size: 14px;
   line-height: 1.29;
   color: #fff;
+  font-style: normal;
   @media screen and (min-width:768px) {
     font-weight: 400;
   }
